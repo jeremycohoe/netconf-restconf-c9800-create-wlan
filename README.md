@@ -1,6 +1,8 @@
 These NETCONF XML payloads can be used to create a WLAN on a Cisco Catalyst 9800 WLC running IOS XE 16.11
 
 1. Create WLAN 
+
+```
 <rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="6">
 <edit-config xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
    <target>
@@ -29,10 +31,12 @@ These NETCONF XML payloads can be used to create a WLAN on a Cisco Catalyst 9800
      </wlan-cfg-entries>
    </wlan-cfg-data>
 </config></edit-config></rpc>
-
+```
 
 
 2. Verify WLAN configuration
+
+```
 <rpc message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
   <get>
     <filter>
@@ -46,9 +50,12 @@ These NETCONF XML payloads can be used to create a WLAN on a Cisco Catalyst 9800
     </filter>
   </get>
 </rpc>
+```
 
 
 3. Delete WLAN
+
+```
 <rpc message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" 
 xmlns:xc="urn:ietf:params:xml:ns:netconf:base:1.0">
   <edit-config>
@@ -66,4 +73,4 @@ xmlns:xc="urn:ietf:params:xml:ns:netconf:base:1.0">
     </config>
   </edit-config>
 </rpc>
-
+```
